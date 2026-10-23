@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integration &mdash; StratScope AI</title>
+  <meta name="description" content="Your StratScope integration details &mdash; API key, project, and SDK setup." />
+  <link rel="icon" type="image/png" href="StratScope-logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="navbar" id="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="logo"><img src="StratScope-logo.png" alt="StratScope AI" /></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="datasets.html">Datasets</a>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="agents.html">Agents</a>
+      <a href="research.html">Research</a>
+      <a href="developers.html">Developers</a>
+      <a href="integration.html">Integration</a>
+    </nav>
+    <div class="nav-actions">
+      <span class="nav-email" id="navEmail"></span>
+      <button class="btn btn-secondary btn-sm" id="signOutBtn">Sign out</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Integration</p>
+      <h1>Integration</h1>
+      <p>Your API credentials and SDK setup.</p>
+    </div>
+  </section>
+
+  <section class="section dash-section dash-first">
+    <div class="container">
+      <div id="errorBanner" class="alert-banner" role="alert" hidden></div>
+      <div id="integrationEmpty" class="empty-state" hidden>
+        <h3>No tenant yet</h3>
+        <p>No API key or project has been provisioned for this account yet. Request one and we&rsquo;ll email it to you.</p>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request an API key</a>
+      </div>
+
+      <div class="section-head">
+        <h2 class="section-title">Credentials</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <tbody>
+            <tr>
+              <th>API key</th>
+              <td><code id="apiKeyValue">&mdash;</code></td>
+              <td class="cell-actions">
+                <button class="btn btn-secondary btn-sm" id="copyApiKeyBtn" type="button">Copy</button>
+              </td>
+            </tr>
+            <tr>
+              <td id="apiKeyStatus" colspan="2">Your API key</td>
+            </tr>
+            <tr>
+              <th>Key prefix</th>
+              <td><code id="keyPrefixValue">&mdash;</code></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Project ID</th>
+              <td><code id="projectIdValue">&mdash;</code></td>
+              <td class="cell-actions">
+                <button class="btn btn-secondary btn-sm" id="copyProjectBtn" type="button">Copy</button>
+              </td>
+            </tr>
+            <tr>
+              <th>Agent ID</th>
+              <td><code id="agentIdValue">&mdash;</code></td>
+              <td class="cell-actions">
+                <button class="btn btn-secondary btn-sm" id="copyAgentBtn" type="button">Copy</button>
+              </td>
+            </tr>
+            <tr>
+              <th>Agent name</th>
+              <td><span id="agentNameValue">&mdash;</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>Base URL</th>
+              <td><code id="baseUrlValue">&mdash;</code></td>
+              <td class="cell-actions">
+                <button class="btn btn-secondary btn-sm" id="copyBaseUrlBtn" type="button">Copy</button>
+              </td>
+            </tr>
+            <tr>
+              <th>Ingest endpoint</th>
+              <td><code id="ingestValue">&mdash;</code></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note-text">Your API key is shown only once per key &mdash; store it somewhere safe. Lost it? <a href="contact.html">Contact us</a> and we&rsquo;ll issue a new one.</p>
+    </div>
+  </section>
+
+  <section class="section dash-section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Connect the SDK</h2>
+      </div>
+      <div class="empty-state">
+        <h3>Python</h3>
+        <p><code>pip install stratscope</code></p>
+        <button class="btn btn-secondary btn-sm" id="copyPythonBtn" type="button">Copy snippet</button>
+      </div>
+      <div class="empty-state">
+        <h3>TypeScript</h3>
+        <p><code>npm install @stratscope/sdk</code></p>
+        <button class="btn btn-secondary btn-sm" id="copyTsBtn" type="button">Copy snippet</button>
+      </div>
+      <p class="note-text">Full usage examples on the <a href="developers.html">Developers</a> page. Every execution your agent records becomes visible in your <a href="dashboard.html">Dashboard</a>.</p>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="StratScope-logo.png" alt="StratScope AI" class="footer-logo" />
+      <p>The execution intelligence platform for AI agents. Turning real-world agent executions into the datasets, benchmarks and analytics the industry runs on.</p>
+      <div class="footer-social">
+        <a href="mailto:khalidkhan46572@gmail.com">Email us</a>
+        <a href="https://www.linkedin.com/in/khalid-khan-4b548033b/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Product</h4>
+      <a href="datasets.html">Execution datasets</a>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="research.html">Research reports</a>
+      <a href="developers.html">APIs &amp; SDKs</a>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Company</h4>
+      <a href="index.html">About</a>
+      <a href="agents.html">Register your agent</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/khalid-khan-4b548033b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Legal</h4>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="data-governance.html">Data governance</a>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <span>&copy; <span id="year"></span> StratScope AI. All rights reserved.</span>
+    <span>Execution intelligence for AI agents.</span>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/integration.js"></script>
+</body>
+</html>
